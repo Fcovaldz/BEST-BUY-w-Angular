@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="jumbotron bg-white">
+        <h2 class="display-3 text-center">All products!!!</h2>
+        <div class="card-colums">
+            <div class="card shadow p-1" *ngFor="led Product of ArrayProducts">
+                <img src="{{ Product.img }}" class="card-img-top" style="width: 300px;" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{ Product.brand }}</h5>
+                    <p class="card-text">Model: <small class="">{{ Product.model }}</small></p>
+                    <p class="card-text text-muted">Depeartament: <small class="">{{ Product.departament }}</small></p>
+                </div>
+                <button class="btn btn-block btn-outline-info" [routerLink]="['/product', {{ Product.id }}]">Ver mas...</button>
+            </div>
+        </div>
+    </div>
+</div>

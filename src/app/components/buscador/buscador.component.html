@@ -1,0 +1,28 @@
+<div class="animated fadeIn m-5">
+  <h2>
+    Resultados para <small>{{ nombreP }}</small>
+  </h2>
+  <div *ngIf="(buscados == 0)" class="alert alert-primary" role="alert">No se encontro resultado para <b>{{nombreP}}</b> 
+</div>
+  <div *ngIf="(buscados != 0)" class="card-columns">
+      <div class="card" *ngFor="let producto of buscados">
+
+        <img src="{{producto.img}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h3 class="card-title">{{producto.model}}</h3>
+            <h5>{{producto.brand}}</h5>
+            <p class="card-text">$ {{producto.price}}</p>
+            <p class="card-text font-weight-bolder">Departamento: {{producto.departament}}</p>
+        </div>
+
+      </div>
+    <!-- <div class="card" *ngFor="let producto of buscados">
+
+            
+            <div class="card-body">
+                <h3 class="card-title">{{producto.model}}</h3>
+             
+            </div>
+        </div>-->
+  </div>
+</div>
